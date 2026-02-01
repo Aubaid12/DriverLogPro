@@ -17,7 +17,8 @@ function App() {
       if (!baseUrl) {
         throw new Error("VITE_API_BASE_URL is not defined");
       }
-      const response = await axios.post(`${baseUrl}/generate-plan/`, data);
+     const response = await axios.post(`${baseUrl}/api/generate-plan/`, data);
+
       setResult(response.data);
     } catch (err) {
       console.error(err);
